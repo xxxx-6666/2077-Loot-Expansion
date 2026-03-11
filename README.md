@@ -167,7 +167,7 @@ Determines the value of rewards by comprehensively analyzing the monster's behav
 ---
 
 > [!TIP]
-> **Need help?** Visit our [Official Discord Server](https://github.com/xxxx-6666/2077-전리품-확장판) for fast technical support and configuration assistance!
+> **Need help?** Visit our [Official Discord Server](https://discord.com/invite/cyber2077) for fast technical support and configuration assistance!
 
 <p align="center">
   Developed with ❤️ by <strong>GOXH</strong><br>
