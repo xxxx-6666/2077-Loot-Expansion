@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="icon.png" width="160" height="160" style="border-radius: 20%">
-</p>
-
 <h1 align="center">LootExpansion</h1>
 
 <p align="center">
