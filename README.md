@@ -12,6 +12,10 @@
   실시간 환경 스캔을 통해 최적화된 드롭 테이블을 구성하고 협동 플레이의 가치를 높입니다.
 </p>
 
+<p align="center">
+  <a href="#-english-version">🌐 <strong>Switch to English Version</strong></a>
+</p>
+
 ---
 
 ## 📑 목차 (Contents)
