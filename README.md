@@ -1,95 +1,175 @@
-# LootExpansion
+<p align="center">
+  <img src="icon.png" width="160" height="160" style="border-radius: 20%">
+</p>
 
-**MelonLoader 0.7.1** 기반으로 제작된 **Mimesis** 전용 고성능 전리품 확장 모드입니다. 
+<h1 align="center">LootExpansion</h1>
 
-이 모드는 지역 진입 시 주변 환경을 스캔하여 **동적 전리품 테이블**을 생성하며, 몬스터가 현재 위치에 적합한 아이템을 드롭하도록 보장합니다. 더욱더 파밍이 재밌고, 팀원들과 협동하여 위험의 고비를 넘기면 그에 따른 확실한 보상을 제공하는 것이 특징입니다.
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.0.2-blue.svg?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/game-MIMESIS-purple.svg?style=flat-square" alt="Game">
+  <img src="https://img.shields.io/badge/MelonLoader-0.7.1%2B-green.svg?style=flat-square" alt="MelonLoader">
+  <img src="https://img.shields.io/badge/status-working-brightgreen.svg?style=flat-square" alt="Status">
+</p>
 
-## 필수 요구 사항
-이 모드가 작동하려면 **[MimicAPI](https://thunderstore.io/c/mimesis/p/NeoMimicry/MimicAPI/)**가 반드시 필요합니다. 모드를 실행하기 전에 MimicAPI가 설치되어 있는지 확인해 주세요.
-
-## 주요 기능
-* **몬스터 전용 확정 드롭**: 
-    * **Ramblam**: 장전되지 않은 샷건과 샷건 탄약 1개를 드롭합니다.
-    * **Heavy D**: 붐박스와 **금 목걸이**를 드롭합니다.
-* **파밍 밸런스 유지 (특수 아이템 제외)**: 파밍의 목적성을 명확히 하기 위해 아래 아이템들은 몬스터 드롭 테이블에서 제외되었습니다.
-    * **제외 아이템**: Defective Bomb, Golden Statue, Shining Frog
-* **몰입형 논-드롭 시스템**: **MIMIC** 및 **Bombesis**는 가짜 아이템을 드롭하기 때문에, 진짜와 가짜의 구분이 어려운 몰입감을 위해 아이템을 드롭하지 않습니다.
-* **지능형 밸런스 적용**: 그 외 몬스터들은 행동, 반격, 체력을 고려하여 드롭되는 아이템들의 가격 가중치 밸런스가 적용되었습니다.
-* **커스텀 드롭 수량**: 몬스터에 따라서 드롭할 수 있는 아이템 개수를 최소 0개에서 최대 10개까지 설정 가능합니다.
-* **스마트 구역 스캔**: 착륙 후 5초 동안 자동으로 실내 전리품 데이터를 수집합니다.
-* **최적화된 클린 코드**: 불필요한 변수와 메서드를 제거하여 FPS 안정성을 극대화했습니다.
-* **자동 초기화 시스템**: 지역 이동 시 모든 캐시를 초기화하여 메모리 누수와 전리품 중복을 방지합니다.
-
-## 모드 설정 (Configuration)
-게임 실행 후 생성되는 `UserData/MelonPreferences.cfg` 파일에서 아래 항목들을 수정할 수 있습니다. 
-**설정법을 잘 모르시겠다면 저희 디스코드 서버를 방문해주세요!**
-
-* **Enabled**: 모드 활성화 여부 (True/False)
-* **Drop_Probability**: 드롭 확률 (0.1 = 10% / 1.0 = 100%)
-* **몬스터별 드롭 개수 설정 (범위: 0~10)**:
-    1. **Sentryper_Count**: Sentryper 처치 시 드롭 아이템 수
-    2. **BruteBunny_Count**: BruteBunny 처치 시 드롭 아이템 수
-    3. **Maegoostro_Count**: Maegoostro 처치 시 드롭 아이템 수
-    4. **StandingOwl_Count**: StandingOwl 처치 시 드롭 아이템 수
-    5. **MrDelpit_Count**: MrDelpit 처치 시 드롭 아이템 수
-    6. **Quakka_Count**: Quakka 처치 시 드롭 아이템 수
-
-## 설치 방법
-1. [MelonLoader v0.7.1+](https://melonwiki.xyz/)를 설치합니다.
-2. [MimicAPI](https://thunderstore.io/c/mimesis/p/NeoMimicry/MimicAPI/)를 설치합니다.
-3. [GitHub](https://github.com/xxxx-6666)에서 최신 릴리즈를 다운로드합니다.
-4. `LootExpansion.dll` 파일을 게임 경로의 `Mimesis/Mods` 폴더에 넣습니다.
-
-## 상세 사양
-* **게임 버전**: Mimesis v0.2.8+
-* **프레임워크**: MelonLoader v0.7.2+
-* **선행 모드**: MimicAPI
+<p align="center">
+  <strong>Mimesis</strong> 전용 고성능 동적 전리품 확장 시스템입니다.<br>
+  실시간 환경 스캔을 통해 최적화된 드롭 테이블을 구성하고 협동 플레이의 가치를 높입니다.
+</p>
 
 ---
 
-# LootExpansion (English)
+## 📑 목차 (Contents)
+1. [요구사항 (Requirements)](#1-요구사항-requirements)
+2. [설치 방법 (Installation)](#2-설치-방법-installation)
+3. [구성 (Configuration)](#3-구성-configuration)
+4. [주요 특징 (Key Features)](#4-주요-특징-key-features)
+5. [세부 설정 가이드 (Settings Guide)](#5-세부-설정-가이드-settings-guide)
+6. [작동 방식 (How It Works)](#6-작동-방식-how-it-works)
 
-A high-performance loot expansion mod for **Mimesis**, built on **MelonLoader 0.7.1**.
+---
 
-This mod scans the environment upon entering an area to generate **dynamic loot tables**, ensuring that monsters drop items appropriate for their current location. It enhances the farming experience by rewarding players for overcoming high-risk situations through teamwork.
+## 1. 요구사항 (Requirements)
+모드가 정상적으로 작동하기 위해 아래 라이브러리가 반드시 선행 설치되어야 합니다.
+* **[MelonLoader v0.7.1+](https://melonwiki.xyz/)**
+* **[MimicAPI](https://thunderstore.io/c/mimesis/p/NeoMimicry/MimicAPI/)** (Essential Dependency)
 
-## Requirements
-This mod requires **[MimicAPI](https://thunderstore.io/c/mimesis/p/NeoMimicry/MimicAPI/)** to function. Please ensure MimicAPI is installed before running the mod.
+---
 
-## Key Features
-* **Guaranteed Monster Drops**:
-    * **Ramblam**: Drops an unloaded shotgun and 1 shotgun shell.
+## 2. 설치 방법 (Installation)
+1. **[Releases](https://github.com/xxxx-6666/2077-전리품-확장판/releases)** 페이지에서 최신 버전의 `LootExpansion.dll`을 다운로드합니다.
+2. 게임 설치 경로 내 `MIMESIS/MelonLoader/Mods/` 폴더에 다운로드한 파일을 넣습니다.
+3. 게임을 실행하여 모드가 정상적으로 로드되는지 확인합니다.
+
+---
+
+## 3. 구성 (Configuration)
+첫 실행 후 생성되는 `UserData/MelonPreferences.cfg` 파일에서 상세 설정을 변경할 수 있습니다.
+
+| Setting | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `Enabled` | `bool` | `true` | 모드 활성화 여부 |
+| `Drop_Probability` | `float` | `1.0` | 아이템 드롭 확률 (0.1 ~ 1.0) |
+| `Monster_Count` | `int` | `1 ~ 5` | 각 몬스터별 최대 드롭 수량 (0 ~ 10) |
+
+---
+
+## 4. 주요 특징 (Key Features)
+
+### 확정 보상 및 밸런스 (Guaranteed Rewards & Balance)
+* **Specific Drops**: 
+    * **Ramblam**: 장전되지 않은 샷건과 탄약 1개를 드롭합니다.
+    * **Heavy D**: 붐박스와 **금 목걸이**를 드롭합니다.
+* **Exclusions**: 파밍 가치 보존을 위해 `Defective Bomb`, `Golden Statue`, `Shining Frog`는 드롭에서 제외됩니다.
+* **Immersion**: 진짜와 가짜의 구분을 위해 `MIMIC` 및 `Bombesis`는 아이템을 드롭하지 않습니다.
+
+---
+
+## 5. 세부 설정 가이드 (Settings Guide)
+
+`MelonPreferences.cfg`에서 조정 가능한 각 몬스터별 드롭 설정입니다.
+
+| Key | Default | Description |
+| :--- | :--- | :--- |
+| `Sentryper_Count` | `5` | **센트리퍼** 처치 시 드롭 아이템 수 (최대 10) |
+| `BruteBunny_Count` | `5` | **브루트 버니** 처치 시 드롭 아이템 수 (최대 10) |
+| `Maegoostro_Count` | `3` | **매구스트로** 처치 시 드롭 아이템 수 (최대 10) |
+| `StandingOwl_Count` | `1` | **스탠딩 아울** 처치 시 드롭 아이템 수 (최대 10) |
+| `MrDelpit_Count` | `1` | **미스터 델핏** 처치 시 드롭 아이템 수 (최대 10) |
+| `Quakka_Count` | `1` | **쿼카** 처치 시 드롭 아이템 수 (최대 10) |
+
+---
+
+## 6. 작동 방식 (How It Works)
+
+### 스마트 구역 스캔 (Smart Area Scanning)
+지역 진입(착륙) 후 **최초 5초간** 실내의 모든 전리품 데이터를 실시간으로 수집합니다. 이를 통해 현재 구역의 난이도와 테마에 가장 적합한 **동적 전리품 테이블**을 즉석에서 생성하여 적용합니다.
+
+### 지능형 밸런스 알고리즘 (Intelligent Balancing)
+몬스터의 행동 패턴, 반격 위험도, 그리고 체력을 종합적으로 분석하여 보상의 가치를 결정합니다. 위험을 감수하고 강력한 적을 처치한 팀에게 그에 걸맞은 높은 가치의 보상을 제공하도록 설계되었습니다.
+
+<br>
+
+---
+
+# 🇺🇸 English Version
+
+High-performance dynamic loot expansion system exclusively for **Mimesis**. It constructs optimized drop tables through real-time environment scanning and enhances the value of cooperative play.
+
+## 📑 Contents
+1. [Requirements](#1-requirements)
+2. [Installation](#2-installation)
+3. [Configuration](#3-configuration)
+4. [Key Features](#4-key-features)
+5. [Settings Guide](#5-settings-guide)
+6. [How It Works](#6-how-it-works)
+
+---
+
+## 1. Requirements
+The following libraries must be installed beforehand for the mod to function correctly.
+* **[MelonLoader v0.7.1+](https://melonwiki.xyz/)**
+* **[MimicAPI](https://thunderstore.io/c/mimesis/p/NeoMimicry/MimicAPI/)** (Essential Dependency)
+
+---
+
+## 2. Installation
+1. Download the latest `LootExpansion.dll` from the **[Releases](https://github.com/xxxx-6666/2077-전리품-확장판/releases)** page.
+2. Place the downloaded file in the `MIMESIS/MelonLoader/Mods/` folder within your game installation path.
+3. Launch the game and verify that the mod is loaded correctly.
+
+---
+
+## 3. Configuration
+Detailed settings can be modified in the `UserData/MelonPreferences.cfg` file generated after the first run.
+
+| Setting | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `Enabled` | `bool` | `true` | Toggle mod functionality |
+| `Drop_Probability` | `float` | `1.0` | Item drop chance (0.1 ~ 1.0) |
+| `Monster_Count` | `int` | `1 ~ 5` | Max drop quantity per monster (0 ~ 10) |
+
+---
+
+## 4. Key Features
+
+### Guaranteed Rewards & Balance
+* **Specific Drops**: 
+    * **Ramblam**: Drops an unloaded shotgun and 1 ammo.
     * **Heavy D**: Drops a boombox and a **Gold Necklace**.
-* **Loot Balance Integrity**: To ensure a clear sense of progression and farming goals, the following items are excluded from monster drop tables:
-    * **Excluded Items**: Defective Bomb, Golden Statue, Shining Frog
-* **Immersive Non-Drop System**: To maintain the challenge of distinguishing real items from fakes, **MIMIC** and **Bombesis** do not drop items upon death.
-* **Intelligent Balance Algorithm**: For all other monsters, loot drops are balanced based on their behavior, counter-attack risk, and health.
-* **Custom Drop Count**: Configure the number of items dropped per monster, ranging from **0 to 10**.
-* **Smart Area Scanning**: Automatically collects indoor loot data for 5 seconds after landing.
-* **Performance Optimized**: Clean code architecture with minimal overhead to ensure maximum FPS stability.
-* **Auto-Reset System**: Clears all caches when moving to a new area to prevent memory leaks and loot duplication.
+* **Exclusions**: To preserve farming value, `Defective Bomb`, `Golden Statue`, and `Shining Frog` are excluded from drops.
+* **Immersion**: To distinguish between real and fake, `MIMIC` and `Bombesis` do not drop items.
 
-## Configuration
-Settings can be adjusted in the `UserData/MelonPreferences.cfg` file after the first run.
-**If you are unsure how to configure the settings, please visit our Discord server!**
+---
 
-* **Enabled**: Toggle Mod Activation (True/False)
-* **Drop_Probability**: Drop chance (0.1 = 10% / 1.0 = 100%)
-* **Per-Monster Drop Count (Range: 0-10)**:
-    1. **Sentryper_Count**: Number of items dropped by Sentryper
-    2. **BruteBunny_Count**: Number of items dropped by BruteBunny
-    3. **Maegoostro_Count**: Number of items dropped by Maegoostro
-    4. **StandingOwl_Count**: Number of items dropped by StandingOwl
-    5. **MrDelpit_Count**: Number of items dropped by MrDelpit
-    6. **Quakka_Count**: Number of items dropped by Quakka
+## 5. Settings Guide
 
-## Installation
-1. Install [MelonLoader v0.7.1+](https://melonwiki.xyz/).
-2. Install [MimicAPI](https://thunderstore.io/c/mimesis/p/NeoMimicry/MimicAPI/).
-3. Download the latest release from [GitHub](https://github.com/xxxx-6666).
-4. Place `LootExpansion.dll` into the `Mimesis/Mods` folder.
+Detailed drop settings for each monster adjustable in `MelonPreferences.cfg`.
 
-## Specifications
-* **Game Version**: Mimesis v0.2.8+
-* **Framework**: MelonLoader v0.7.2+
-* **Dependency**: MimicAPI
+| Key | Default | Description |
+| :--- | :--- | :--- |
+| `Sentryper_Count` | `5` | Drop count for **Sentryper** (Max 10) |
+| `BruteBunny_Count` | `5` | Drop count for **BruteBunny** (Max 10) |
+| `Maegoostro_Count` | `3` | Drop count for **Maegoostro** (Max 10) |
+| `StandingOwl_Count` | `1` | Drop count for **StandingOwl** (Max 10) |
+| `MrDelpit_Count` | `1` | Drop count for **MrDelpit** (Max 10) |
+| `Quakka_Count` | `1` | Drop count for **Quakka** (Max 10) |
+
+---
+
+## 6. How It Works
+
+### Smart Area Scanning
+Collects real-time loot data from all interiors for the **first 5 seconds** after entering an area (landing). Based on this, it generates and applies a **dynamic loot table** most suitable for the current area's difficulty and theme on the fly.
+
+### Intelligent Balancing Algorithm
+Determines the value of rewards by comprehensively analyzing the monster's behavior patterns, counterattack risk, and health. It is designed to provide rewards worthy of the effort to teams that take risks to defeat powerful enemies.
+
+---
+
+> [!TIP]
+> **Need help?** Visit our [Official Discord Server](https://github.com/xxxx-6666/2077-전리품-확장판) for fast technical support and configuration assistance!
+
+<p align="center">
+  Developed with ❤️ by <strong>GOXH</strong><br>
+  © 2026 LootExpansion. All rights reserved.
+</p>
