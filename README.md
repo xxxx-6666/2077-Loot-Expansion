@@ -36,7 +36,7 @@
 ---
 
 ## 2. 설치 방법 (Installation)
-1. **[Releases](https://github.com/xxxx-6666/2077-전리품-확장판/releases)** 페이지에서 최신 버전의 `LootExpansion.dll`을 다운로드합니다.
+1. **[Releases](https://github.com/xxxx-6666/2077-Loot-Expansion/releases)** 페이지에서 최신 버전의 `LootExpansion.dll`을 다운로드합니다.
 2. 게임 설치 경로 내 `MIMESIS/MelonLoader/Mods/` 폴더에 다운로드한 파일을 넣습니다.
 3. 게임을 실행하여 모드가 정상적으로 로드되는지 확인합니다.
 
@@ -113,7 +113,7 @@ The following libraries must be installed beforehand for the mod to function cor
 ---
 
 ## 2. Installation
-1. Download the latest `LootExpansion.dll` from the **[Releases](https://github.com/xxxx-6666/2077-전리품-확장판/releases)** page.
+1. Download the latest `LootExpansion.dll` from the **[Releases](https://github.com/xxxx-6666/2077-Loot-Expansion/releases)** page.
 2. Place the downloaded file in the `MIMESIS/MelonLoader/Mods/` folder within your game installation path.
 3. Launch the game and verify that the mod is loaded correctly.
 
