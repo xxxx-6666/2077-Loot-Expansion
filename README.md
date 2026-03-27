@@ -1,7 +1,7 @@
 <h1 align="center">LootExpansion</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.0.4-blue.svg?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/version-1.0.5-blue.svg?style=flat-square" alt="Version">
   <img src="https://img.shields.io/badge/game-MIMESIS-purple.svg?style=flat-square" alt="Game">
   <img src="https://img.shields.io/badge/MelonLoader-0.7.1%2B-green.svg?style=flat-square" alt="MelonLoader">
   <img src="https://img.shields.io/badge/status-working-brightgreen.svg?style=flat-square" alt="Status">
